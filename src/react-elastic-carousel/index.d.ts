@@ -110,6 +110,14 @@ export interface ReactElasticCarouselProps {
 
 declare class ReactElasticCarousel extends React.Component<
   ReactElasticCarouselProps
-> {}
+> {
+  goTo: (page: number) => void
+}
+
+declare module "react-elastic-carousel" {
+  interface ReactElasticCarouselProps {
+    children?: React.ReactNode; // Add this if it's missing
+  }
+}
 
 export default ReactElasticCarousel;
